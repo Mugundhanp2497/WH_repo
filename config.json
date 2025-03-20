@@ -1,0 +1,37 @@
+{
+    "staging":{
+      "baseUrl": "http://iam.ithred.in/",
+      "username": "mugundhan@ithredconsulting.com",
+      "password": "password123"
+    },
+    "QA": {
+      "baseUrl": "http://iam.ithred.net/",
+      "username": "nallasamy@ambattur.com", 
+      "password": "password123"
+    },
+    "SAPDB":{
+      "user": "sa",
+    "password": "Passw0rd",
+    "server": "172.16.9.244",
+    "port": 1433,
+    "database": "ITR_SAP_IND",
+    "options": {
+        "encrypt": false,
+        "enableArithAbort": true
+    }
+
+    },
+    "WHDB":{
+      "user": "UAT_Test",
+    "password": "uat@123",
+    "server": "172.16.9.243",
+    "port": 1433,
+    "database": "ITR_WMS_IND",
+    "options": {
+        "encrypt": false,
+        "enableArithAbort": true
+    }
+
+    }
+
+}
