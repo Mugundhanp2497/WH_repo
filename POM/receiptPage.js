@@ -20,19 +20,20 @@ class receiptPage
         this.txt_remark= this.page.locator("//input[@id='remarks']");
         this.btn_view= this.page.getByRole('button',{name:'View'});
         this.btn_addRow= this.page.getByRole('button',{name:'+Add Row'});
-        this.slt_dropLoad= this.page.locator("//div[@id='Supplier']"); 
+        this.slt_dropLoad= this.page.locator("//div[@id='dropLoad']"); 
         this.opt_orderView= this.page.getByRole('option',{name:'OrderView'});
         this.slt_orderNO= this.page.locator("//div[@id='orderNo']/div/div/div[2]/input");
         this.opt_order= this.page.getByRole('option',{name:'40506'});
         this.btn_selectAll= this.page.getByRole('button',{name:'Select all'});
-        this.slt_matGroup= this.page.locator();
-        this.slt_matCode= this.page.locator();
-        this.slt_matColor=  this.page.locator(); 
-        this.slt_matSize=  this.page.locator();
-        this.slt_barcodeNo=  this.page.locator();
-        this.btn_checkBox=  this.page.locator();
-        this.icn_close=  this.page.locator();
-        this.btn_save=  this.page.locator();
+        this.slt_matGroup= this.page.locator("//input[@name='matGroup']");
+        this.slt_matCode= this.page.locator("//input[@name='matCode']");
+        this.slt_matColor=  this.page.locator("//input[@name='matColor']"); 
+        this.slt_matSize=  this.page.locator("//input[@name='matSize']");
+        this.slt_barcodeNo=  this.page.locator("//input[@name='barCodeNo']");
+        this.txt_cvUnchecked= this.page.locator("//input[@id='cvUncheck-0']");
+        this.btn_checkBox=  this.page.locator("//input[@id='checked-0']");
+        this.btn_close= this.page.locator("//button[@class='btn-close']");
+        this.btn_save= this.page.getByRole('button',{name:'Save'});
 
     }
 
@@ -54,7 +55,21 @@ class receiptPage
         await this.opt_orderView.click();
         await this.slt_orderNO.fill('40506');
         await this.opt_order.click();
+        await this.slt_matGroup.click();
         await this.btn_selectAll.click();
+        await this.slt_matCode.click();
+        await this.btn_selectAll.click();
+        await this.slt_matColor.click();
+        await this.btn_selectAll.click();
+        await this.slt_matSize.click();
+        await this.btn_selectAll.click();
+        await this.slt_barcodeNo.click();
+        await this.btn_selectAll.click();
+        await this.btn_view.nth(1).click();
+        await this.txt_cvUnchecked.fill('3');
+        await this.btn_checkBox.click();
+        await this.btn_close.click();
+        await this.btn_save.click();
 
     }
 }

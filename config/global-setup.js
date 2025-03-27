@@ -11,7 +11,7 @@ module.exports=async()=>
     });
     const page= await context.newPage();
     let loginPage= new LoginPage(page)
-    const environment= 'QA';//available-> staging/QA
+    const environment= 'staging';//available-> staging/QA
     const envConfig = config[environment];
     const url= String(envConfig.baseUrl);
     const email= String(envConfig.username);
@@ -19,10 +19,8 @@ module.exports=async()=>
     await page.goto(url);
     await loginPage.iThredLogin(email,password);
     await loginPage.navigateWarehouse(); 
-    await page.waitForLoadState('networkidle',{timeout:39000})
+    await page.waitForLoadState('networkidle',{timeout:39000});
     await page.context().storageState({path:"user.json"});
     await browser.close();
-
-
 
 };

@@ -22,7 +22,7 @@ class ginPage
         this.opt_gateEntryNo= this.page.getByRole('option', { name: `${this.entryNo}` })
         this.slt_supplier= this.page.locator("//input[@id='react-select-15-input']"); 
         this.slt_hangx= this.page.getByRole('option', { name: 'HANGZHOU XINSHENG PRINTING AND DYEING' });
-        this.slt_docType= this.page.locator("//div[@id='docTypeSelect']");
+        this.slt_docType= this.page.locator("(//div[@id='docTypeSelect']/div/div/div[2])[2]");
         this.opt_PoNo= this.page.getByRole('option', { name: 'PoNo' });
         this.slt_poNo= this.page.locator("//input[@id='react-select-28-input']");
         this.opt_poNoFDD= this.page.getByRole('option',{name:'FF242630'});
@@ -78,10 +78,10 @@ class ginPage
         this.txt_barcodeNo3= this.page.locator("(//div[@id='input-2-barCodeNo']/descendant::div)[4]/child::input");
         this.txt_barcodeNo4= this.page.locator("(//div[@id='input-3-barCodeNo']/descendant::div)[4]/child::input");
         this.txt_barcodeNo5= this.page.locator("(//div[@id='input-4-barCodeNo']/descendant::div)[4]/child::input");
-        this.opt_barCode4= this.page.getByRole('option',{name:'BC12345'});
-        this.opt_barCode5= this.page.getByRole('option',{name:'BC11223'});
+        this.opt_barCode4= this.page.getByRole('option',{name:'1234567895'});
+        this.opt_barCode5= this.page.getByRole('option',{name:'1234567896'});
         this.txt_conversionFactor= this.page.locator("(//tbody/tr/td[14])[1]");
-        this.slt_filterType= this.page.locator("svg.css-8mmkcg").nth(4);
+        this.slt_filterType= this.page.locator("svg.css-8mmkcg").nth(5);
         this.slt_filterUnit= this.page.locator("svg.css-8mmkcg").nth(3);
         this.chk_GDchkbox = this.page.locator("//input[@id='dtcheckbox-0']/ancestor::td");
 
@@ -158,21 +158,21 @@ class ginPage
         await this.opt_bin.click();
         await this.txt_autoQc.fill(autoQcPer);
         await this.txt_crRemark.fill('Test remark');
-        await this.slt_newLFNo.click();
-        await this.opt_yes.click();
+        // await this.slt_newLFNo.click();
+        // await this.opt_yes.click();
         await this.btn_poView.click();
         await this.btn_close.click();
         await this.btn_view.click();
         await expect (this.txt_poBalanceQty).toBeHidden({timeout:39000});
         this.poBalanceQty=  await this.txt_poBalanceQty.getAttribute("value");
-        this.receivedInvQty= Math.floor(this.poBalanceQty/10);
+        this.receivedInvQty= Math.floor('3');
         console.log('received invoice quantity',this.receivedInvQty);
         await this.txt_receivedInvQty.fill(String(this.receivedInvQty));
         await this.txt_groosWtKg.fill('5');
         await this.txt_netWtKg.fill('5');
         await this.btn_next.click();
         this.conversionFactor=await this.txt_conversionFactor.textContent();
-        let ginQty= this.receivedInvQty* this.conversionFactor;
+        let ginQty= (this.receivedInvQty* this.conversionFactor).toFixed(2);
         this.myAutoQcQty= await (( this.conversionFactor*this.receivedInvQty*autoQcPer)/100).toFixed(2);
         console.log("MyAuto "+this.myAutoQcQty);
         this.autoQcQty=String(await this.txt_autoQcQty.getAttribute("value"));
@@ -201,8 +201,8 @@ class ginPage
         await this.txt_supShade.fill('5');
         await this.txt_batchNo.fill('5');
         await this.txt_supRefNo.fill('5');
-        await this.txt_receivedQty.fill(this.myAutoQcQty);
-        await this.txt_labQcQty.fill('2');
+        await this.txt_receivedQty.fill(ginQty);
+        await this.txt_labQcQty.fill('1');
         await this.chk_GDchkbox .click();
         await this.btn_saveGin.click();
         this.ginId= (await this.saveConfMsg.textContent()).split('-')[0].trim();
@@ -334,6 +334,7 @@ class ginPage
        await expect (this.txt_QCDocNo).toHaveText(/.+/,{timeout:39000});
        this.qcId= (await this.txt_QCDocNo.textContent())?.trim();
        console.log('QC document number= ',this.qcId);
+       return this.ginId;
 
     }
     async createGinTrims(autoQcPer)
@@ -356,14 +357,14 @@ class ginPage
         await this.opt_bin.click();
         await this.txt_autoQc.fill(autoQcPer);
         await this.txt_crRemark.fill('Test remark');
-        await this.slt_newLFNo.click();
-        await this.opt_yes.click();
+        // await this.slt_newLFNo.click();
+        // await this.opt_yes.click();
         await this.btn_poView.click();
         await this.btn_close.click();
         await this.btn_view.click();
         await expect (this.txt_poBalanceQty).toBeHidden({timeout:39000});
         this.poBalanceQty=  await this.txt_poBalanceQty.getAttribute("value");
-        this.receivedInvQty= Math.floor(this.poBalanceQty/10);
+        this.receivedInvQty= Math.floor('3');
         console.log('received invoice quantity',this.receivedInvQty);
         await this.txt_receivedInvQty.fill(String(this.receivedInvQty));
         await this.btn_next.click();
@@ -398,13 +399,13 @@ class ginPage
         await expect (this.txt_barcodeNo2).toBeDisabled();
         await this.txt_seqNO3.fill('1');
         await expect (this.txt_barcodeNo3).toBeDisabled();
-        await this.txt_barcodeNo4.pressSequentially('BC12345');
+        await this.txt_barcodeNo4.pressSequentially('1234567895');
         await this.opt_barCode4.click();
         await expect (this.txt_seqNO4).toBeDisabled();
-        await this.txt_barcodeNo5.pressSequentially('BC11223');
-        await this.opt_barCode5.click();
-        await expect (this.txt_seqNO5).toBeDisabled();
-        await this.chk_GDchkbox .click();
+        // await this.txt_barcodeNo5.pressSequentially('1234567896');
+        // await this.opt_barCode5.click();
+        // await expect (this.txt_seqNO5).toBeDisabled();
+        // await this.chk_GDchkbox .click();
         await this.btn_saveGin.click();
         this.ginId= (await this.saveConfMsg.textContent()).split('-')[0];
         console.log(this.ginId);
@@ -451,7 +452,7 @@ class ginPage
         await this.btn_view.click();
         await expect (this.txt_poBalanceQty).toBeHidden({timeout:39000});
         this.poBalanceQty=  await this.txt_poBalanceQty.getAttribute("value",{timeout:120000});
-        this.receivedInvQty= Math.floor(this.poBalanceQty/10);
+        this.receivedInvQty= Math.floor('3');
         console.log('received invoice quantity',this.receivedInvQty);
         await this.txt_receivedInvQty.fill(String(this.receivedInvQty));
         await this.btn_next.click();

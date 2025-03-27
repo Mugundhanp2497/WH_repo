@@ -30,12 +30,12 @@ module.exports = defineConfig({
   ['allure-playwright'],],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: 'http://wms.ithred.net/',
+    baseURL: 'http://wms.ithred.in/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
    
     video: 'on',
-    slowMo: 900,
+    slowMo: 1200,
     colorScheme: 'dark',
     timezoneId: 'Europe/London',
     trace: 'on',

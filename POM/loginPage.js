@@ -16,7 +16,8 @@ constructor(page)
     this.mnu_gin= this.page.locator("//span[text()='Gin']").first();
     this.mnu_issue= this.page.locator("//span[text()='Issue']");
     this.mnu_receipt= this.page.locator("//span[text()='Receipt']");
-    this.mnu_receivedExplorer= this.page.locator("//span[contains(text(),'ReceiveExplorer')]");
+    this.mnu_receivedExplorer= this.page.locator("//span[text()='ReceiveExplorer']/parent::a");
+    this.mnu_lab= this.page.locator("//span[text()='Laboratory']");
 
 }
 
@@ -43,19 +44,24 @@ async mnuGateEntry()
 
 async mnuGin()
 {
-  this.mnu_receivedExplorer.click();
-  this.mnu_gin.click();
+  await this.mnu_receivedExplorer.click();
+  await this.mnu_gin.click();
 }
 
 async mnuIssue()
 {
-  this.mnu_receivedExplorer.click();
-  this.mnu_issue.click();
+  await this.mnu_receivedExplorer.click();
+  await this.mnu_issue.click();
 }
 async mnuReceipt()
 {
-  this.mnu_receivedExplorer.click();
-  this.mnu_receipt.click();
+  await this.mnu_receivedExplorer.click();
+  await this.mnu_receipt.click();
+}
+async mnuLab()
+{
+  await this.mnu_receivedExplorer.click();
+  await this.mnu_lab.click();
 }
 
 }

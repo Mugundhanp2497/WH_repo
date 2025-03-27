@@ -2,8 +2,8 @@
   "cookies": [
     {
       "name": "clientId",
-      "value": "VoJdUE5CsixwOZ7v",
-      "domain": "iam.ithred.net",
+      "value": "0KcmemPUnMzoBiJq",
+      "domain": "iam.ithred.in",
       "path": "/",
       "expires": -1,
       "httpOnly": false,
@@ -12,8 +12,8 @@
     },
     {
       "name": "user",
-      "value": "{%22signIn%22:%222025-03-20T04:59:42.855Z%22%2C%22refreshIn%22:%222025-03-20T04:59:42.855Z%22%2C%22info%22:%22U2FsdGVkX19c7KbIZa691719XoQj24TPUyUCpQ1jPhWrjwaZhG8/pTs/Sq2HL88hje/JngkD99LwtsYMK3x23IWi7CKFzKrfli6LsLkN9TLl0xbI+w2dTRlN7SvKK5X4q73dXG/9rk/IDGaRZ+MFvc6vXbJkKzZW45iuy5BqNjQN/g+apLLh/7jLwNm/gyKOlypHi1jisN2M9n+iJ31ymEijwcSFumumJlmG4VSBjbxyRzs1y5A1yQzg7vIIXPzIqjfKxPIjgRWs1TDIl8YHhLY6EN39WJ3IpMc4PrkzhEO7T6nyVjE/Cngj6dHpZwVlf1aa9Il3FYFz1E3ALFL5irTBQpo3WkLGCpwAhY1DjmJ+E6BIz7ob/ChricsxtrBY69QI1YI0P3GjB1d8GhWChcbBaD9IoOg/aLitY2nzKUFEkNtNJks6BNHlMO4R78s2sTslzydBoeknu/90+R8P/GD069A5+p0I+VXSZ8LVLG1Ry2HQnXUnO+FSHhzrGhCg7ExK0MytiCuGhdjgm3cD8l8IZZejifIyM4rrDZvK1nY0j+EWhx/wqGhI78Uwo6xbv0btFB7V0mIY4q22QYBfyTSDYfF4tj9uJEYiClKrQ4nbOTuUnyUYSfG1KJxtkzqN4bOMDhLGsIVpW9oLQxtUnrOzp2wIpQI/bglzzntTxTxH18NeRr4wJ5mcLBMtrty4+bbErW9fPcd0P7sMRa6lQXW2H0UupsReo3OHpkrWiB0bs+LDXAb//wERr4FI5OZ68M4BtZ1dZ0j4/xYs9RU3XBFC9gU9wqXTk5ov4mL+9OjcPROdJxEiUH+8mcGuaBhEttAIiplvjBl06My3NzQnu45GUx3Q/dzwyx3mx5mlQ1HOXSYSzLrPGjXV/ffn4es0jzP2lfTM4jprNtfPbD5isnct4tSnF0H0sUQSjEmCi1f3xsIHvH9t3xLy6lqfVEVOLvv5y3Rx3LQ72E6nw5LzU8st64+nhZ/AKpAoaD3wxPvZy555+bf8r2Rpx2C7gR9jMeuhv03sCe3Pg/xZqY8d/Zq2a/IYcdCMdoJvDPudLlLX/a//ya+qwNIST197Zcvs3f7FwAwcmt2EOGWiDsxokRuDLXKUHlYZ+tAX+xc6twZGReeOpHjmzXZDkeL95uf6r3I9kn9swV2EHT0Dpn4GV8oNVKbcp1V5X6ZOqB0+11+Enn9GPtQVIUSixlFNfhR3zVnujmW6IxiIg6nuO2kECR/xc1XR3CXX9LrVM7AMiCmm+brUfc8Acv76PMm3V7SnNQQrfnQoV47ETjvfqSBhTyW4HffME+74YfP8MNA4hRCZODfTFFgk08qczat28a/10zJAACFcUE3/lJgAsmkt5uXmUoVUr0xA0eHOZp1kiLDmXovjfdsNtCGG/TuLWXpO5MPCSAyyKFp4fMpGS1iSUEsLTFgIRAISZXRyPvsWDJE=%22%2C%22expires%22:1742511462855}",
-      "domain": "iam.ithred.net",
+      "value": "{%22signIn%22:%222025-03-27T10:48:32.940Z%22%2C%22refreshIn%22:%222025-03-27T10:48:32.940Z%22%2C%22info%22:%22U2FsdGVkX1/hpbILjq4zz7P+YqWu4VBt6XkpbIxDfuG2pMkwMeCpREvoZsZ7pWBynJhmL2E0TIHR+oRHPGY6e8QYBV/SGnoJnFY3LLVkD2F/0UssmXf5cXkQKO9ISJZJhEgMmBRBXdH+5cqK7XncG5LQ+ZDahoeee+RtqNbloBgVU2JpPTU+5umDPfBCI/5zEKPRvOFCtxR7Uww7Chq6UkaBQkgK8/ovJGgv1ob460Tym+6qKWzEz7nj/xlJGxc9yiXbMdtdui8xFmtM1U1cT3soCnhAniOEqosVfFIbOMuF8f5P8IwJwkjjeCldKJmZdAO42VJhm58hQqwhbdXN2EnUY8F8/SBWzuW9PxWRncWzCURGyh0VCRgX+r+oKLLQNWN4NxUVfQib1evgE2D8q0eWG1dYMojUpS1gkSJN7mmUXtK9YJ/w4ei20KUDkyLHIN633ZyfQ5Sp35YRrOS2tAIb8Szuik8pvzrj3H6ENhX/o99ZoKj+DH0sp53fjgLTIv5OPs0nDkQ+Y75p7ZtEJDr/AbkLjxMMQ+qTA07I1SQiP6I6UwAc8ofl1RcknWQPkDsPofUPQ4v9aZQViSCSedfTB/nPzXcwIeAQL9ysr0vT7/cwfd1EpdRc+SZZsPJDIpZz1TbgF2xxnlMZ/2cVP8fdXn618zE0Txw/wNtSZdTpcZICrvU65p6YcPtXO5IdxpMFzO2w9T19/ChyypZD0BzORc7hs5s1MZ3RfoNaGS0Pk1o6OK+hU0j7GtMVN3A8nmWvNCpmEQilUTLqHH+JHbs3KkEO3hym/mgkmvLC9EPAlIQE4OCkHaZNOVHk63RJJoTYBXzJte3MOJ0MPQ4RMJ0U+Oj6TipbWudtq+ljCO9OapjYFQ/QwZoa+7KRHWbssi7oOfdl2Srzo+/A4KJe10B4smqQMw5DYPUsdq2zkVufOkpsteQDO6UxXlwHWI+o95u1IU7l7PH0gKxnrSZUVHvzLgqOQO6lo5ejmbg4cgdBsruK098KMPUStagNJFuAaw3nCzGa0OgAAZzAT+NbLaSXecq1zXmS46/1fzmy22axq10RYVpPoszVFLotgeJG6Gx5n/rTk6CactwutS30o6YFZshqKbintGlpjCVh5JIwaWzjGgQQKyc+P8MWnyGL0LsNfiukjFGW9sRAlt+b6CCdC1mNhir6a5KwaogTg6dXfhWhEM/Kxs94A0rw2ppZ/O5DTSeObdu+0UCtr33EjQkaHgcafs62KwaDpEn/dniyiQ1AltPe1nys/hRR2VYc6m7M3B62zAcY9D5PdsIbhW6M7NuWzBcj912uNWoEnQ977OlXTbHb2VXHaM5gTGW0g4j/c+6dSsOsXq4c4zkEhkiFUE27PNcYJvWUhgWTsGOJFIg9U5hk61uWVMS99eMp1S9Vksb9VOs/7YCKgHfoQHJo5T0vUs9T4gKatqIRPcA=%22%2C%22expires%22:1743137192940}",
+      "domain": "iam.ithred.in",
       "path": "/",
       "expires": -1,
       "httpOnly": false,
@@ -22,8 +22,8 @@
     },
     {
       "name": "clientId",
-      "value": "VoJdUE5CsixwOZ7v",
-      "domain": "app.ithred.net",
+      "value": "0KcmemPUnMzoBiJq",
+      "domain": "app.ithred.in",
       "path": "/",
       "expires": -1,
       "httpOnly": false,
@@ -32,8 +32,8 @@
     },
     {
       "name": "user",
-      "value": "{%22signIn%22:%222025-03-20T04:59:43.314Z%22%2C%22refreshIn%22:%222025-03-20T04:59:43.314Z%22%2C%22info%22:%22U2FsdGVkX1+lpLsx0IXGi0zFEt82HR5EcMNFIuM/kB7L6MFQ43rqFFwBwfB68vTBrGbGk4iQh3Mb9eTF/HVk2buw5aTHVJ90zSMFrkrO07EVnF+lrduaeqhqdzd6BM6wMeSYRYt9k5izeWml6tL4zP11w5SdB5/WifpOeBS1mL0oQWseqAFBEkY4SVAuvPIJv41UnULMffcRAT+Z8m0FAyPG9EB0WXvl4udEtSxjF0edCN/K//bDIfYheVSdv+ASHXfmnVuE8I/Gi/Xb5QnCDufNbjYdtMah7H1TdiCZKG3szZccupeJBq+dzpqKN25PzgFK91moKxQGYL10Tqw3zcsv0Ut5ZiNIQV6Un3pkbn8xuhKH/ZSXDBHw+RAqwwlm72LmX9k7V5XuRENVEGyHPG7qZO+5rlAst2ZjvPoAH8HbQ+0bfFn7XDJ8foll35EP4LISoI+9CIz3YcR+EAUR37OxqixQgMRNTpPcuFuSNXc8dN57re7CsJ2csU7juynTCTUyI91KYal2q5Cfv+FDM8P2qQybSQkVVk15T4Eq66diLUxRXBasFvOwAtxmygttGZ9vAKlqOm/Wd21lPTiy0GP180HOis0GWOCoStwrrCHWZTO8HncQ+yYghowXGmqsdqxL66WdmB43hwnfRNmHBQxnhlS/Y2ztqU2Tp2E5sDoN14YlgyoTmvDmeyzLBlLsG4xohrIDIkGYLk2qgfjvnSDxOSsNSMUU3iLvvsQqERjgwchVltIgUnzsEb4XuM8qCT2JGUv5+rAQDolC9u8tkT8f86r/fFct8c7Z3EiEYsZqrvf51rE2wT2RE1zv3aZITx8XGT9CFdhV8a/UMbDH2w56GmK1BJ6Kq4NWWMDIOT6/zUaiViAeRLW/X0n+4JgoEP9OXB2zPqbhwukNiCW4YIa3pOY6CaZHuwSeuA158CetBWi4UykrlMFjJ1ismWvdS5dmnqHfZcNJAXTV5lHKyyUiIMXTJr4kWg7xMbju5hPr3GlgsMxVfJyuqCaAn73EteSHkLhW4900ljqkEzcd9A4exMSFH0KOO0mlwZIl+M8D3Wzf/eJFIH79Kw3qhnbi62FeOcnTzBgm+ONFkEJBS3q8YKM/cCVxtUhmSYtyl6DbxfzvBejjBfUAqhkccU2f9kNwOB5YODSHl+vnjR9HzANNNIxFdy0Dxk+FkpejskCLKjfuBDMGYBAebtjrPU84m2milyawej/Mnspjw0CubDA8p7pnKzldcF7OnbSAG+Q7wSFJpR87tkY4mYSaODL30+ifFJUPiOVS4AuUBvTaJZq1p5gBQVCrgB/THcZh+fNM4rLrLc52hIJ0zgm7BcmwiIqsq5cmAZDoj9nXE81XR/DNzF5EPPzYvtj5PMpL5f+Cqb1kIMXMQXZwUHagK4nq%22%2C%22expires%22:1742511463314}",
-      "domain": "app.ithred.net",
+      "value": "{%22signIn%22:%222025-03-27T10:48:33.636Z%22%2C%22refreshIn%22:%222025-03-27T10:48:33.636Z%22%2C%22info%22:%22U2FsdGVkX19+sEHZxV9eDN6TPLCmDlRfMV1IIGSyBn4z0NEnq2CqK59n+rZIzjCsiRDiN7agEZyDFv0v0mU6d0sC7JSqa9e8O4pDi+AOwwBqtUy3PnUIxwsY69rP15xhHsFjqbxhqNwirfxWKPdYGSzvFzYFtNesJC+ZyW/wLVyL2EIxrQxcuRRuT67K1hzur8x7aC8u6saDEHrYDwcLvDe4Wdc8VE2hcfRTMNB/1iTDeQtbOS5C4q6pfodeJ+jNm8BPgWPUSEVg1fQZBQJU06gP/nm7VOLDNTS35QnFwLTEVg0SH9TXPifTC4NjNjqHVqzzXuuiL7kaNF3urknH0vK2VqZseMxhQdc95Kvilq3QLgPi6VPaxJGhJfG5r3pmsQsXlMwm/6v+XzKsKCvOFlBwhUqqnYbNbvKIJg9/znz0Vyrgp4ca85yXzxEmAs9d4gbxkOGdKba1gj3sw1VqG4OY2PJ5v6RoDDhjJh+JHe2YKkZqt+dGK4ISow+CmiP/rp5fum1ZSpyOYz8DZZjjfHiJoKPFoGYv9loRPNVS+GHVL1nTOFQjgBKsyNXe/rHT+NUhcWZPfCm5ZVIsaPGtw7cfwdP2TnN+JHRtJsaacAZjxSff8xD4v3pOIpkz1xZlI01awvDXYrklAA1uPGvt4a+tD1dlyL8L3Q3g42iiD5XoOIskRVWsWycu+N52gF/q4R4Ai3Cx6mJH7e0ZSBvBM9iWZvKDLKXaY4u6jvhqHhRP2/fpN4HNHptV7bRT1eCJlYXCK+UONu/RWs4K9JuGbkY5/gjInKrWO+p6CPzfmIkhaOZSistIjgEnG6USAG8O/X1rigkrIunCIAaCl/x1ZxoM0jmf6Ne0pRLtPJH5duWWhms5N9ZbZOLFMA6uQPyj2dsIpdzjH3kSBMm5N5EP5u1RohBwIh1wHT86Av/J4T+gDQPdX7nhuRKehLLzDMz6qyUjg3U7I7spkJlv89vH8fX9VqbqgHBwlGdxRKG2khP/aotnI9SbkyhXA/arZQ/TmjqJMi8F8atnOXBlIJOmNyrGYY/29H4BYjXaVWPrKohvb69CQztzu8FwA4MGiTjoIegECrDZzHV4oY21lkuHt5Uq3KSm/3ymb2yyUJgccHiCnBWi3VGZgr2Il/M3r+1ebtItEGILx0uerFFfmUvNXBNTPXRwafYTmmeE6J6bOhsKJthX0YMS+07KTuez8rMIqe2v3ybeQskOM/YLRUaG9aSConsI/zcGWzFeK08CdNcwX0LjttMzmJjkkBKw26UMIjfegLtAOwPtyVkFj4cTm7TRTFKazLMlitTWEEt/rYtP/i45vxhajlFdiltFKe5g/p8k5tBUiDG0ajvmz9deBfHqa6SM8WWIKtlgkGuuaZafwcAIbIOC73T5eHK5WRyqZWBRK6TDUa89BSmnMfIF2w==%22%2C%22expires%22:1743137193636}",
+      "domain": "app.ithred.in",
       "path": "/",
       "expires": -1,
       "httpOnly": false,
@@ -42,8 +42,8 @@
     },
     {
       "name": "clientId",
-      "value": "VoJdUE5CsixwOZ7v",
-      "domain": "wms.ithred.net",
+      "value": "0KcmemPUnMzoBiJq",
+      "domain": "wms.ithred.in",
       "path": "/",
       "expires": -1,
       "httpOnly": false,
@@ -52,8 +52,8 @@
     },
     {
       "name": "user",
-      "value": "{%22signIn%22:%222025-03-20T04:59:45.205Z%22%2C%22refreshIn%22:%222025-03-20T04:59:45.205Z%22%2C%22info%22:%22U2FsdGVkX19zcnEQ8BwdSp5bR91ShbZ0Bo3faaJB9Q6Jg42YXQdFh2foOzuOLMGBhGdW4FBremV4JWPVoU66y1c9rgSyhXvvpZepOpyFz9wgysgWe1j9Ip5KdEh66/OjhYB9IBPTmQ2w0XafywHG4gPjXzQ7xVEkycDvAHF+aISHKWks3cc62HoiE/BpDeJygtYuE3cmHCem0QKDvjW2yQLy/HioDqYfb7JD4dXtfBu6yh7gSQC4QLdpsPXJYnxcz/0vABAecslMQPWsnLmpbjeKOFWPS+BKO7KRos4YLnp8wktAhv1ZW38lGbDqLfMha1mEFkI5vwX0xhNjqBHCYnkiePHYT3Brho13H+1tIxlXbl87RtLNF6fZefyISAFi7lNi2aBE3ulOvUfz6Jkf+OE2Ox83sbgCgFCclFt+rgNhyaetwjBUOg5hH+FRG39xjuscFnNZzvoSrZsWL5adhlyP+9Q/aUvI88FUdAcYcb1fldJXz77PH5C0cWA8ClBfr7NSYOin4D1Se3WZeJv5VdO9bbkGqU4fdqF0CdIx8swUPAPqYQvfBffK4eWmgSwr+1Zf+vWLjNGUCjRQXRhFMfEfMXMt8DMDLvg8tkrahtEagLBcDlXAtz0bd7Kq3lK/QjWJ6SvZg33arzfiR1YrRMqMMrDq+Jh1N3zjsH+dMeyaf/a768Bo6/7DyWE0HCHEJkmm7GY+R6TB1WoqXCRlxP2sL5Xy4GZSk0CGlAcvnxsZfvMnxztdWZRd0JjJrK6Sexx3kMKPtLCGbetfwq/2mwG7e7goNLOhcmHGDJi7ajSIuRW3w97tLXbyIvwRLpFqHuG3Q/JA5sXx4+grahV8pFE2pUeIQh2i4nhStqzuQpRjKNdS7EQL9lh8gYdiabo4xt4E8uNnYs69APZI3vT73na9sGe1ynvuQ870Zmolhfd1dPESPg30Kn4mYCJfD4Sn8AmbG/6v3azs79SY120xt0wP/OkoFdD9jezqTwn+whlxe3DhBcDMdQOpqk1h/HwB8jggzMiiR23r9kbnoQ/sOsEghErEPIZRcuWwLEkAhBnkghQWzx3xXflnAQpRUy5wHAEx6LzEUokoznkO8DM7SiglGX+gJ0yW7LcTL9ITIKUIE3IW5lRbmaFSEUi4OORZ0V0V3kvzRkuFBjKX1lbDEWuRN/mX/3Y/eWlUMuRYlUJZaArrikpiN3uT8zHs77OIZ86qn4iyrZTP1HGEmSApHcGrgovMtRYTvHbwjPdHEPHC6dag0FPUl4e0G0fyxnxERMOK/R43STahS3IKjULUHE6JBoXLfhe3JNoonPNIKZSuewLZTJ3mEZmmMi9BMakgAQIUFQo29VEhOMmXgFEmm7E6xdeduq5Pql1HGczO9f+uL9Wg2WcJRC2kzCNq8+c1%22%2C%22expires%22:1742511465205}",
-      "domain": "wms.ithred.net",
+      "value": "{%22signIn%22:%222025-03-27T10:48:36.161Z%22%2C%22refreshIn%22:%222025-03-27T10:48:36.161Z%22%2C%22info%22:%22U2FsdGVkX1/Ud0Nv6VTNePptcjZR9qrI30APJGVj4Jst/1MrabQLWyq+10S4RLukLdCCUxZZdWG/2Owu8rdUMkS4d+laz9oUcbQ9QyB7Ia/2vPJ9ajsHi55DGHLVWOnK6uAUAHdcaR4Kx1lt4r9CDIUUFFQWTWG+gBuqdT4vSbRam2If6hXXeLLYELS4LrNGL8cRijOWOgpdEroLxO0mPe9P0cZiCIE0KMmYSks8R98nTGUmU+URfU3uPfb3yQ0I7xvjKRzVfGShbDMBAP+ACYRfz+lLa/r3Qz+ZAE8LlUQE6cnzD8qsWoRtQbgLaaQBmT359LyoFbAZgnzzcqFs2zHT9m11+80uWWQI5SowM77qosk//0PDVzpJji4jVmEpCbgm2msoRvVMELDq0g4gNqjCw6d89RUgEo5rs0sI4M7QGrJJYXCM0kCobXi5PCyXnEHc5cEa7XcORfaG+EG+06eKei1fvtIa8vjxOloZpo6tI43p5s98e8tm1yh2DQzOgUDvPre+o6tQJ8jT1hN5gpKlb0L87LoxiQok6atvnuLs1I9OJDiepo4AhZhCHglV4CkQhR2ie56jkFOXnNz3pqy/qLx7Wnr6UVUrnbnksjdCoc/KH8+szJ2yvVsfcHO4mNt2Sw0YSgpsm+u5vzOdQLVSa0cJbSPn1cRCwNoy6u/fEEeMHK9qYm7WUV+YJLEc8imyRRT9Oa/CAP/omB/aBFxIpVmeBQcjzqg3FL/FspsbfZZ2xujHEAUfJXMNkqia1aaW3PIFqDbTVkmy6kkmZig662MY5hnG4MqUTA3WJsOkMBdfFG46+o37VLl2rmQReTEUWCtF60mnSdjk26Tm0pAG+ztXVBCuvCDid0WIEh3sK6Ye17iD8rc8am3sjgSIHUhB1jf4qoVDa9dcXQHpu9hnw44Icjz6s81Bg0T9b0RRsOJc6lOfJW2mZ87u8TJJFrAF7ouAm5VXcqYNirwtkPrQGS8YPHzwKgWbiCESVXtX5uqlEP7QU81C/uG2c2vW3jVLDz/IpVksFo2uzPSWfBmyLknDj4xaUBnPE6b7m6B4mps6y9enjcJGKoYbltXlWoaLJSwxrbO1NRH2v+jfX4F7bwcv+lSSvkUDm6ZjMTI3cKC3ziixwumRzb18wRBaHEnGY+/laouvR4sXitHnaNNCT0mndqCWOTijmNHIx9Q/UFYkThsqWw8a9mP7JYETTyWKTXel4hs05DW0y//b0SCkfTsjJfjp1NpIkiBcEccrl+nl3QLcnDfRR1+qijxT6cSIZkbediP5ttb1kazxvaIqP6tCzvCy47eUGtyboVl22k2nWxQ3HKmPp6AwWpejwv2UV4KT6oe3K+YfnxMY3pqHjCLe4tf4yuCKi8M09Zfjl8Mi2vS9KXG9SaZiii1J0r5M/NsPfqGs85e/mA+/fg==%22%2C%22expires%22:1743137196161}",
+      "domain": "wms.ithred.in",
       "path": "/",
       "expires": -1,
       "httpOnly": false,
@@ -63,7 +63,7 @@
   ],
   "origins": [
     {
-      "origin": "http://wms.ithred.net",
+      "origin": "http://wms.ithred.in",
       "localStorage": [
         {
           "name": "itr_location",
@@ -71,25 +71,25 @@
         },
         {
           "name": "applicationConf",
-          "value": "{\"conf\":\"http://gateway01.ithred.net/api/\",\"env\":\"prod\",\"platform\":\"app\"}"
+          "value": "{\"conf\":\"http://gateway01.ithred.in/api/\",\"env\":\"prod\",\"platform\":\"app\"}"
         }
       ]
     },
     {
-      "origin": "http://iam.ithred.net",
+      "origin": "http://iam.ithred.in",
       "localStorage": [
         {
           "name": "applicationConf",
-          "value": "{\"conf\":\"http://gateway01.ithred.net/api/\",\"env\":\"prod\",\"platform\":\"app\"}"
+          "value": "{\"conf\":\"http://gateway01.ithred.in/api/\",\"env\":\"prod\",\"platform\":\"app\"}"
         }
       ]
     },
     {
-      "origin": "http://app.ithred.net",
+      "origin": "http://app.ithred.in",
       "localStorage": [
         {
           "name": "applicationConf",
-          "value": "{\"conf\":\"http://gateway01.ithred.net/api/\",\"env\":\"prod\",\"platform\":\"app\"}"
+          "value": "{\"conf\":\"http://gateway01.ithred.in/api/\",\"env\":\"prod\",\"platform\":\"app\"}"
         }
       ]
     }

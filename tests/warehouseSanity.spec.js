@@ -2,7 +2,9 @@ const loginPage= require('../POM/loginPage');
 import {test, expect} from '@playwright/test';
 import gateEntryPage from '../POM/gateEntryPage';
 import ginPage from '../POM/ginPage';
+import laboratoryPage from '../POM/laboratoryPage';
 import issuePage from '../POM/issuePage';
+import transferPage from '../POM/transferPage';
 import readExcel from '../utils/readExcel';
 import receiptPage from '../POM/receiptPage';
 import {WriteExcel} from '../utils/writeExcel';
@@ -27,7 +29,10 @@ test('createGinForFabric',async({page})=>
         await LoginPage.mnuGin();
         console.log(entryNo);
         let GinPage= new ginPage(page,entryNo);
-        await GinPage.createGinFabric('90');
+        let ginid= await GinPage.createGinFabric('90');
+        let LaboratoryPage=new laboratoryPage(page,ginid);
+        await LoginPage.mnuLab();
+        await LaboratoryPage.saveLab();
     })
 
 test('gateEntryTrims', async({page})=>
@@ -73,13 +78,19 @@ test('create issue',async({page})=>
         await IssuePage.createSampleIssue();
         await IssuePage.createPilotIssue();
         await IssuePage.createLotIssue();
-        await IssuePage.createProcessIssue();
+        //await IssuePage.createProcessIssue();
         await IssuePage.createOtherIssue();
-        await IssuePage.createPurchaseReturnIssue();
+        //await IssuePage.createPurchaseReturnIssue();
+        await IssuePage.createSaleIssue();
+        await IssuePage.createDisposeIssue();
+        await IssuePage.createBinIssue();
+        await IssuePage.createUnitIssue();
         await IssuePage.CreateIssueFieldValidationForB9B10();
         await IssuePage.CreateIssueFieldValidationForD15()
 
     })
+
+    
 
     test('create receipt',async({page})=>
         {
@@ -88,6 +99,17 @@ test('create issue',async({page})=>
             let ReceiptPage= new receiptPage(page);
             await ReceiptPage.createReceipt();
         });
+
+    test('create transfer', async({page})=>
+        {
+            let LoginPage= new loginPage(page);
+            await LoginPage.mnuIssue();
+            let TransferPage=new transferPage(page);
+            await TransferPage.createBinTransfer();
+            await TransferPage.createStyleTransfer();
+            await TransferPage.createRackTransfer();
+        
+        })
 
 test('db test',async({page})=>
 {

@@ -18,8 +18,8 @@ class issuePage
         this.slt_issueType= this.page.locator("//div[@id='IssueType']");
         this.opt_factoryIssue= this.page.getByRole('option',{name:'35 | FACTORY ISSUE'});
         this.opt_sampleIssue= this.page.getByRole('option',{name:'SAMPLE ISSUE'});
-        this.opt_pilotIssue= this.page.getByRole('option',{name:'PILOT ISSUE'});
-        this.opt_lotIssue= this.page.getByRole('option',{name:'LOT ISSUE'});
+        this.opt_pilotIssue= this.page.getByRole('option',{name:'11 | PILOT ISSUE', exact: true});
+        this.opt_lotIssue= this.page.getByRole('option',{name:'12 | LOT (BULK) ISSUE', exact: true});
         this.opt_processIssue= this.page.getByRole('option',{name:'PROCESS ISSUE'});
 
         this.opt_otherIssue= this.page.getByRole('option',{name:'OTHER ISSUE'});
@@ -34,10 +34,12 @@ class issuePage
         this.slt_fromBin= this.page.locator("//div[@id='IssueFromBIN']");
         this.opt_b9bin= this.page.getByRole('option',{name:'AR | NON BOND RUNNING'});
         this.slt_toBin= this.page.locator("//div[@id='ToBIN']/child::div/div/div[2]/input");
+        this.opt_tobin= this.page.getByRole('option',{name:'AS ~ NON MOVING'});
         this.slt_fromStyle= this.page.locator("//div[@id='fromOrderNo']/child::div/div/div[2]/input");
         this.slt_toStyle= this.page.locator("//div[@id='toOrderNo']/child::div/div/div[2]/input");
         this.opt_style= this.page.getByRole('option',{name:'40506'});
         this.slt_issueTo= this.page.locator("//div[@id='IssueTo']/div/div/div[2]/input");
+        this.txt_issueTo= this.page.locator("//input[@id='IssueTo']");
         this.opt_essar= this.page.getByRole('option',{name:'essar impex,'});
         this.opt_TA= this.page.getByRole('option',{name:'TA'});
         this.slt_lineNo= this.page.locator("//div[@id='LineNo']");
@@ -50,6 +52,7 @@ class issuePage
         this.txt_issueAddress= this.page.locator("//input[@id='IssueAddress']");
         this.slt_poNO= this.page.locator("//div[@id='PoNo']/child::div/div/div[2]/input");
         this.opt_poNO= this.page.getByRole('option',{name:'FF242899'});
+        this.opt_poNO1= this.page.getByRole('option',{name:'FF242898'});
         this.btn_view= this.page.getByRole('button',{name:'View',exact:true});
         this.slt_wiType= this.page.locator("//div[@id='PopUpType']");
         this.slt_wiOrderNO= this.page.locator("//div[@id='orderNo']/child::div/div/div[2]/input");
@@ -65,10 +68,21 @@ class issuePage
         this.btn_add= this.page.locator("");
         this.btn_save= this.page.getByRole('button',{name:'Save'});
         this.box_check= this.page.locator("//input[@type='checkbox']");
-        this.txt_ncvUnchecked1= this.page.locator("//input[@id='input-0-ncvUncheck']");
-        this.txt_ncvUnchecked2= this.page.locator("//input[@id='input-1-ncvUncheck']");
+        this.txt_ncvUnchecked1= this.page.locator("//tbody/tr/td/input[@type='text' and not(@disabled)]");
+       // this.txt_ncvUnchecked2= this.page.locator("//input[@id='input-1-ncvUncheck']");
 
         this.btn_close= this.page.locator("//button[@class='btn-close']");
+        this.btn_remove= this.page.getByRole('button',{name:'Remove'}).nth(2);
+
+        this.mnu_userboard= this.page.locator("//span[text()='Userboard']/parent::a");
+        this.btn_toDo= this.page.locator("//div[@id='total_jobs']").nth(1);
+        this.lnk_fabricIndent= this.page.locator("//h6[text()='FABRICINDENT']");
+        this.btn_indentIssue= this.page.getByRole('button',{name:'Indent Issue'});
+        this.lnk_totalIssue= this.page.locator();
+        this.opt_b9b10bin= this.page.getByRole('option',{name:'B9 | B9B10 Factory Stock '});
+        this.slt_toUnit= this.page.locator("//div[@id='ToUnit']/div/div/div[2]/input");
+        this.opt_b12= this.page.getByRole('option',{name:'B12'})
+
 
     }
 
@@ -93,7 +107,7 @@ class issuePage
         await this.opt_AIR.click();
         await this.txt_transportDocNo.fill('Test Transport no');
         await this.txt_remarks.fill('Test Remark');
-        await this.txt_issueAddress.fill('Test IssueAddress');
+        //await this.txt_issueAddress.fill('Test IssueAddress');
         await this.btn_view.click();
         await this.slt_wiType.click();
         await this.slt_wiOrderNO.fill('40506');
@@ -109,10 +123,11 @@ class issuePage
         await this.slt_wiCodeNo.click();
         await this.btn_selectAll.click();
         await this.btn_view.nth(1).click();
-        await this.box_check.nth(1).click();
-        await this.box_check.nth(2).click();
-        await this.txt_ncvUnchecked1.fill('1');
-        await this.txt_ncvUnchecked2.fill('1');
+        //await this.box_check.nth(1).click();
+        //await this.page.pause();
+        //await this.box_check.nth(2).click();
+        await this.txt_ncvUnchecked1.nth(0).fill('0.1');
+        //await this.txt_ncvUnchecked2.fill('1');
         await this.btn_close.click();
         await this.btn_save.click();
 
@@ -139,7 +154,7 @@ class issuePage
         await this.opt_AIR.click();
         await this.txt_transportDocNo.fill('Test Transport no');
         await this.txt_remarks.fill('Test Remark');
-        await this.txt_issueAddress.fill('Test IssueAddress');
+        //await this.txt_issueAddress.fill('Test IssueAddress');
         await this.btn_view.click();
         await this.slt_wiType.click();
         await this.slt_wiOrderNO.fill('40506');
@@ -155,10 +170,10 @@ class issuePage
         await this.slt_wiCodeNo.click();
         await this.btn_selectAll.click();
         await this.btn_view.nth(1).click();
-        await this.box_check.nth(1).click();
-        await this.box_check.nth(2).click();
-        await this.txt_ncvUnchecked1.fill('1');
-        await this.txt_ncvUnchecked2.fill('1');
+        //await this.box_check.nth(1).click();
+        //await this.box_check.nth(2).click();
+        await this.txt_ncvUnchecked1.nth(0).fill('0.1');
+        //await this.txt_ncvUnchecked2.fill('1');
         await this.btn_close.click();
         await this.btn_save.click();
 
@@ -184,7 +199,7 @@ class issuePage
         await this.opt_AIR.click();
         await this.txt_transportDocNo.fill('Test Transport no');
         await this.txt_remarks.fill('Test Remark');
-        await this.txt_issueAddress.fill('Test IssueAddress');
+        //await this.txt_issueAddress.fill('Test IssueAddress');
         await this.btn_view.click();
         await this.slt_wiType.click();
         await this.slt_wiOrderNO.fill('40506');
@@ -200,10 +215,10 @@ class issuePage
         await this.slt_wiCodeNo.click();
         await this.btn_selectAll.click();
         await this.btn_view.nth(1).click();
-        await this.box_check.nth(1).click();
-        await this.box_check.nth(2).click();
-        await this.txt_ncvUnchecked1.fill('1');
-        await this.txt_ncvUnchecked2.fill('1');
+        //await this.box_check.nth(1).click();
+        //await this.box_check.nth(2).click();
+        await this.txt_ncvUnchecked1.nth(0).fill('0.1');
+        //await this.txt_ncvUnchecked2.fill('1');
         await this.btn_close.click();
         await this.btn_save.click();
 
@@ -230,7 +245,7 @@ class issuePage
         await this.opt_AIR.click();
         await this.txt_transportDocNo.fill('Test Transport no');
         await this.txt_remarks.fill('Test Remark');
-        await this.txt_issueAddress.fill('Test IssueAddress');
+        //await this.txt_issueAddress.fill('Test IssueAddress');
         await this.btn_view.click();
         await this.slt_wiType.click();
         await this.slt_wiOrderNO.fill('40506');
@@ -246,10 +261,10 @@ class issuePage
         await this.slt_wiCodeNo.click();
         await this.btn_selectAll.click();
         await this.btn_view.nth(1).click();
-        await this.box_check.nth(1).click();
-        await this.box_check.nth(2).click();
-        await this.txt_ncvUnchecked1.fill('1');
-        await this.txt_ncvUnchecked2.fill('1');
+        //await this.box_check.nth(1).click();
+        //await this.box_check.nth(2).click();
+        await this.txt_ncvUnchecked1.nth(0).fill('0.1');
+       // await this.txt_ncvUnchecked2.fill('1');
         await this.btn_close.click();
         await this.btn_save.click();
 
@@ -273,7 +288,7 @@ class issuePage
         await this.opt_AIR.click();
         await this.txt_transportDocNo.fill('Test Transport no');
         await this.txt_remarks.fill('Test Remark');
-        await this.txt_issueAddress.fill('Test IssueAddress');
+        //await this.txt_issueAddress.fill('Test IssueAddress');
         await this.slt_poNO.fill('FF242899');
         await this.opt_poNO.click();
         await this.btn_view.click();
@@ -292,9 +307,9 @@ class issuePage
         await this.btn_selectAll.click();
         await this.btn_view.nth(1).click();
         await this.box_check.nth(1).click();
-        await this.box_check.nth(2).click();
-        await this.txt_ncvUnchecked1.fill('1');
-        await this.txt_ncvUnchecked2.fill('1');
+        //await this.box_check.nth(2).click();
+        await this.txt_ncvUnchecked1.nth(0).fill('0.1');
+        //await this.txt_ncvUnchecked2.fill('1');
         await this.btn_close.click();
         await this.btn_save.click();
 
@@ -312,14 +327,14 @@ class issuePage
         await this.opt_b9bin.click();
         await this.slt_toStyle.fill('40506');
         await this.opt_style.click();
-        await this.slt_issueTo.fill('Test User');
+        await this.txt_issueTo.fill('Test User');
         // await this.slt_lineNo.click();
         // await this.opt_M1.click();
         await this.slt_transportType.click();
         await this.opt_AIR.click();
         await this.txt_transportDocNo.fill('Test Transport no');
         await this.txt_remarks.fill('Test Remark');
-        await this.txt_issueAddress.fill('Test IssueAddress');
+        //await this.txt_issueAddress.fill('Test IssueAddress');
         await this.btn_view.click();
         await this.slt_wiType.click();
         await this.slt_wiOrderNO.fill('40506');
@@ -335,10 +350,10 @@ class issuePage
         await this.slt_wiCodeNo.click();
         await this.btn_selectAll.click();
         await this.btn_view.nth(1).click();
-        await this.box_check.nth(1).click();
-        await this.box_check.nth(2).click();
-        await this.txt_ncvUnchecked1.fill('1');
-        await this.txt_ncvUnchecked2.fill('1');
+        //await this.box_check.nth(1).click();
+        //await this.box_check.nth(2).click();
+        await this.txt_ncvUnchecked1.nth(0).fill('0.1');
+        //await this.txt_ncvUnchecked2.fill('1');
         await this.btn_close.click();
         await this.btn_save.click();
 
@@ -359,29 +374,38 @@ class issuePage
         await this.opt_AIR.click();
         await this.txt_transportDocNo.fill('Test Transport no');
         await this.txt_remarks.fill('Test Remark');
-        await this.txt_issueAddress.fill('Test IssueAddress');
+        //await this.txt_issueAddress.fill('Test IssueAddress');
         await this.slt_poNO.fill('FF242899');
         await this.opt_poNO.click();
         await this.btn_view.click();
-        await this.slt_wiType.click();
-        await this.slt_wiOrderNO.fill('40506');
-        await this.opt_style.click();
-        await this.slt_wiMattype.click();
-        await this.btn_selectAll.click();
-        await this.slt_wiMatcode.click();
-        await this.btn_selectAll.click();
-        await this.slt_wiMatcolor.click();
-        await this.btn_selectAll.click();
-        await this.slt_wiMatSize.click();
-        await this.btn_selectAll.click();
-        await this.slt_wiCodeNo.click();
-        await this.btn_selectAll.click();
-        await this.btn_view.nth(1).click();
-        await this.box_check.nth(1).click();
-        await this.box_check.nth(2).click();
-        await this.txt_ncvUnchecked1.fill('1');
-        await this.txt_ncvUnchecked2.fill('1');
+        // await this.slt_wiType.click();
+        // await this.slt_wiOrderNO.fill('40506');
+        // await this.opt_style.click();
+        // await this.slt_wiMattype.click();
+        // await this.btn_selectAll.click();
+        // await this.slt_wiMatcode.click();
+        // await this.btn_selectAll.click();
+        // await this.slt_wiMatcolor.click();
+        // await this.btn_selectAll.click();
+        // await this.slt_wiMatSize.click();
+        // await this.btn_selectAll.click();
+        // await this.slt_wiCodeNo.click();
+        // await this.btn_selectAll.click();
+        // await this.btn_view.nth(1).click();
+        // await this.box_check.nth(1).click();
+        //await this.box_check.nth(2).click();
+        await this.txt_ncvUnchecked1.nth(0).fill('0.1');
+        //await this.txt_ncvUnchecked2.fill('1');
         await this.btn_close.click();
+        while (await this.btn_remove.isVisible()) {
+            try {
+                await this.btn_remove.click();
+                await this.page.waitForTimeout(500);  // Short delay to avoid rapid looping
+            } catch (error) {
+                console.log("Button is not available or detached from DOM.");
+                break;  // Exit the loop if an error occurs
+            }
+        }
         await this.btn_save.click();
 
     }
@@ -397,14 +421,14 @@ class issuePage
         await this.opt_saleIssue.click()
         await this.slt_fromBin.click();
         await this.opt_b9bin.click();
-        await this.slt_issueTo.fill('Test User');
+        //await this.slt_issueTo.fill('Test User');
         // await this.slt_lineNo.click();
         // await this.opt_M1.click();
         await this.slt_transportType.click();
         await this.opt_AIR.click();
         await this.txt_transportDocNo.fill('Test Transport no');
         await this.txt_remarks.fill('Test Remark');
-        await this.txt_issueAddress.fill('Test IssueAddress');
+        //await this.txt_issueAddress.fill('Test IssueAddress');
         await this.btn_view.click();
         await this.slt_wiType.click();
         await this.slt_wiOrderNO.fill('40506');
@@ -420,10 +444,10 @@ class issuePage
         await this.slt_wiCodeNo.click();
         await this.btn_selectAll.click();
         await this.btn_view.nth(1).click();
-        await this.box_check.nth(1).click();
-        await this.box_check.nth(2).click();
-        await this.txt_ncvUnchecked1.fill('1');
-        await this.txt_ncvUnchecked2.fill('1');
+        //await this.box_check.nth(1).click();
+        //await this.box_check.nth(2).click();
+        await this.txt_ncvUnchecked1.nth(0).fill('0.1');
+        //await this.txt_ncvUnchecked2.fill('1');
         await this.btn_close.click();
         await this.btn_save.click();
 
@@ -440,14 +464,14 @@ class issuePage
         await this.opt_disposeIssue.click()
         await this.slt_fromBin.click();
         await this.opt_b9bin.click();
-        await this.slt_issueTo.fill('Test User');
+        await this.txt_issueTo.fill('Test User');
         // await this.slt_lineNo.click();
         // await this.opt_M1.click();
         await this.slt_transportType.click();
         await this.opt_AIR.click();
         await this.txt_transportDocNo.fill('Test Transport no');
         await this.txt_remarks.fill('Test Remark');
-        await this.txt_issueAddress.fill('Test IssueAddress');
+        //await this.txt_issueAddress.fill('Test IssueAddress');
         await this.btn_view.click();
         await this.slt_wiType.click();
         await this.slt_wiOrderNO.fill('40506');
@@ -463,10 +487,10 @@ class issuePage
         await this.slt_wiCodeNo.click();
         await this.btn_selectAll.click();
         await this.btn_view.nth(1).click();
-        await this.box_check.nth(1).click();
-        await this.box_check.nth(2).click();
-        await this.txt_ncvUnchecked1.fill('1');
-        await this.txt_ncvUnchecked2.fill('1');
+        //await this.box_check.nth(1).click();
+        //await this.box_check.nth(2).click();
+        await this.txt_ncvUnchecked1.nth(0).fill('0.1');
+        //await this.txt_ncvUnchecked2.fill('1');
         await this.btn_close.click();
         await this.btn_save.click();
 
@@ -484,15 +508,16 @@ class issuePage
         await this.slt_fromBin.click();
         await this.opt_b9bin.click();
         await this.slt_toBin.click();
-        await this.opt_b9bin.click();
-        await this.slt_issueTo.fill('Test User');
+        await this.opt_tobin.click();
+        await this.slt_issueTo.click();
+        await this.slt_d15.click();
         // await this.slt_lineNo.click();
         // await this.opt_M1.click();
         await this.slt_transportType.click();
         await this.opt_AIR.click();
         await this.txt_transportDocNo.fill('Test Transport no');
         await this.txt_remarks.fill('Test Remark');
-        await this.txt_issueAddress.fill('Test IssueAddress');
+        //await this.txt_issueAddress.fill('Test IssueAddress');
         await this.btn_view.click();
         await this.slt_wiType.click();
         await this.slt_wiOrderNO.fill('40506');
@@ -508,10 +533,10 @@ class issuePage
         await this.slt_wiCodeNo.click();
         await this.btn_selectAll.click();
         await this.btn_view.nth(1).click();
-        await this.box_check.nth(1).click();
-        await this.box_check.nth(2).click();
-        await this.txt_ncvUnchecked1.fill('1');
-        await this.txt_ncvUnchecked2.fill('1');
+        //await this.box_check.nth(1).click();
+        //await this.box_check.nth(2).click();
+        await this.txt_ncvUnchecked1.nth(0).fill('0.1');
+        //await this.txt_ncvUnchecked2.fill('1');
         await this.btn_close.click();
         await this.btn_save.click();
 
@@ -528,15 +553,18 @@ class issuePage
         await this.slt_fromBin.click();
         await this.opt_b9bin.click();
         await this.slt_toBin.click();
-        await this.opt_b9bin.click();
-        await this.slt_issueTo.fill('Test User');
+        await this.opt_b9b10bin.click();
+        await this.slt_issueTo.click();
+        await this.slt_d15.click();
+        await this.slt_toUnit.click();
+        await this.opt_b12.click();
         // await this.slt_lineNo.click();
         // await this.opt_M1.click();
         await this.slt_transportType.click();
         await this.opt_AIR.click();
         await this.txt_transportDocNo.fill('Test Transport no');
         await this.txt_remarks.fill('Test Remark');
-        await this.txt_issueAddress.fill('Test IssueAddress');
+        //await this.txt_issueAddress.fill('Test IssueAddress');
         await this.btn_view.click();
         await this.slt_wiType.click();
         await this.slt_wiOrderNO.fill('40506');
@@ -552,13 +580,36 @@ class issuePage
         await this.slt_wiCodeNo.click();
         await this.btn_selectAll.click();
         await this.btn_view.nth(1).click();
-        await this.box_check.nth(1).click();
-        await this.box_check.nth(2).click();
-        await this.txt_ncvUnchecked1.fill('1');
-        await this.txt_ncvUnchecked2.fill('1');
+        //await this.box_check.nth(1).click();
+        //await this.box_check.nth(2).click();
+        await this.txt_ncvUnchecked1.nth(0).fill('0.1');
+        //await this.txt_ncvUnchecked2.fill('1');
         await this.btn_close.click();
         await this.btn_save.click();
 
+    }
+
+    async saveFabricIndent()
+    {
+        await this.mnu_userboard.click({timeout:39000});
+        await this.page.waitForTimeout(9000)
+        await this.btn_toDo.click({force:true,timeout:29000});
+        await this.lnk_fabricIndent.click();
+        await this.box_check.nth(1).click();
+        await this.btn_indentIssue.click();
+        while (await this.btn_remove.isVisible()) {
+            try {
+                await this.btn_remove.click();
+                await this.page.waitForTimeout(500);  // Short delay to avoid rapid looping
+            } catch (error) {
+                console.log("Button is not available or detached from DOM.");
+                break;  // Exit the loop if an error occurs
+            }
+        }
+        await this.lnk_totalIssue.click();
+        await this.txt_ncvUnchecked1.nth(0).fill('1');
+        await this.btn_close.click();
+        await this.btn_save.click();
     }
 
 
