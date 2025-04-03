@@ -97,7 +97,9 @@ class transferPage
         //await this.box_check.nth(1).click();
         await this.txt_ncvUnchecked1.nth(0).fill('0.1');
         await this.btn_close.click({force:true});
+        await this.page.waitForTimeout(3000);
         await this.btn_save.dblclick({force:true});
+
     }
 
     async createStyleTransfer()
@@ -136,6 +138,7 @@ class transferPage
         //await this.box_check.nth(1).click();
         await this.txt_ncvUnchecked1.nth(0).fill('0.1');
         await this.btn_close.click({force:true});
+        await this.page.waitForTimeout(3000);
         await this.btn_save.click({force:true});
     }
 
@@ -177,6 +180,7 @@ class transferPage
         //await this.box_check.nth(1).click();
         await this.txt_ncvUnchecked1.nth(0).fill('0.1');
         await this.btn_close.click({force:true});
+        await this.page.waitForTimeout(3000);
         await this.btn_save.click({force:true});
 
     }

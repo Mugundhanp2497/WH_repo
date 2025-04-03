@@ -6,9 +6,7 @@ const LoginPage = require('../POM/loginPage');
 module.exports=async()=>
 {
     const browser= await chromium.launch({headless:false,args: ['--start-maximized']});
-    const context= await browser.newContext({
-        viewport: { width: 1920, height: 1080 }
-    });
+    const context= await browser.newContext();
     const page= await context.newPage();
     let loginPage= new LoginPage(page)
     const environment= 'staging';//available-> staging/QA

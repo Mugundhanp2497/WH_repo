@@ -33,7 +33,7 @@ module.exports = defineConfig({
     baseURL: 'http://wms.ithred.in/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-   
+    viewport: { width: 1280, height: 720 },
     video: 'on',
     slowMo: 1200,
     colorScheme: 'dark',
@@ -41,7 +41,7 @@ module.exports = defineConfig({
     trace: 'on',
     storageState:'user.json',
     screenshot: 'on',
-    viewport: null,
+    deviceScaleFactor: 0.8,
     recordVideo: {
       dir: 'videos/', // Directory to save video files
       size: {

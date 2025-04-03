@@ -118,7 +118,7 @@ class ginPage
         this.txt_startLength= this.page.locator("//input[@id='startLength-1']");
         this.txt_endLength= this.page.locator("//input[@id='endLength-1']");
         this.btn_ok= this.page.getByRole('button',{name:'Ok'});
-        this.txt_qcGinQCQty= this.page.locator('//tbody/tr/td[3]');
+        this.txt_qcGinQCQty= this.page.locator('//tbody/tr/td[3]').nth(0);
         this.txt_short= this.page.locator('//tbody/tr/td[7]');
         this.txt_excess= this.page.locator('//tbody/tr/td[8]');
         this.txt_bowingPer= this.page.locator("//td[@id='bowingPer-0']");
@@ -134,6 +134,7 @@ class ginPage
         this.txt_result= this.page.locator("(//div[@class='mb-3']/span)[8]");
         this.slt_newLFNo= this.page.locator("//div[@id='newlfno']/div/div/div[2]/input");
         this.opt_yes= this.page.getByRole('option',{name:'Yes'});
+        this.txt_QCuom= this.page.locator('//tbody/tr/td[23]').nth(0);
     
 
     }
@@ -214,7 +215,8 @@ class ginPage
         await this.mnu_userboard.click({timeout:39000});
         await this.page.waitForTimeout(9000)
         await this.btn_toDo.click({force:true,timeout:29000});
-        await this.btn_qc.click({timeout:29000});
+        await this.btn_qc.click({timeout:2900});
+        await this.btn_qc.click({timeout:2900});
         this.hypLnk_ginNo= this.page.locator(`//td[@title='${this.ginId}']`);
         console.log('ginID ',this.ginId )
         let maxRetries = 10;
@@ -245,12 +247,18 @@ class ginPage
        await this.opt_SOLID.click()
        await this.slt_FQCgroupName.click();
        await this.opt_Basic_cotton.click();
+       try{
        await this.btn_view.click();
-      this.qcGinQCQty= await this.txt_qcGinQCQty.textContent();
-      console.log('qcGinQCQty',this.qcGinQCQty);
-      this.FQCactualQty='22';
-      this.FQCactualSize='23';
-      this.bowingInch='5';
+       }
+       catch(error)
+       {
+       console.log('data visible ');
+       }
+       this.qcGinQCQty= await this.txt_qcGinQCQty.textContent({timeout:29000});
+       console.log('qcGinQCQty ',this.qcGinQCQty);
+       this.FQCactualQty='22';
+       this.FQCactualSize='23';
+       this.bowingInch='5';
        await this.txt_FQCactualQty.fill(this.FQCactualQty);
        await this.txt_FQCactualSize.fill(this.FQCactualSize);
        this.actualShort= await this.txt_short.textContent();
@@ -278,8 +286,11 @@ class ginPage
        await this.txt_FQCcheckerRemark.fill('Checker test remark');
        await this.icn_shipmentInfo.click();
        this.minScore= await this.txt_minScore.textContent();
+       console.log('this.minScore= ',this.minScore);
        this.maxScore= await this.txt_maxScore.textContent();
+       console.log('this.maxScore= ',this.maxScore);
        this.txt_shipAllowance= await this.txt_shipAllowance.textContent();
+       console.log('this.txt_shipAllowance= ',this.txt_shipAllowance);
        await this.btn_close.click();
        await this.lnk_totalPoint.click();
        await this.slt_dcType.selectOption("DEFAULT");
@@ -293,16 +304,18 @@ class ginPage
        console.log("tpoint = ",this.tPoint);
        await this.btn_ok.click();
        this.defectPer= await this.txt_defectPer.textContent();
+       console.log('this.defectPer= ',this.defectPer);
        this.grade= await this.txt_grade.textContent();
-       if(this.defectPer<=this.minScore)
+       console.log('this.grade= ',this.grade);
+       if(Number(this.defectPer)<=Number(this.minScore))
        {
         expect (this.grade).toEqual('1');
        }
-       else if(this.defectPer<=this.maxScore)
+       else if(Number(this.defectPer)<=Number(this.maxScore))
        {
         expect (this.grade).toEqual('2');
        }
-       else if(this.defectPer>=this.maxScore)
+       else if(Number(this.defectPer)>=Number(this.maxScore))
        {
         expect (this.grade).toEqual('Reject');
        }
@@ -316,10 +329,19 @@ class ginPage
        this.result= (await this.txt_result.textContent()).split(':')[1].trim();
        console.log('result = ',this.result);
        console.log('this.defectPer = ',this.defectPer);
-       let a=this.aTpoint*3937;
+       this.qcuom= await this.txt_QCuom.textContent();
+       if(this.qcuom=='MTR')
+       {
+        this.uomValue=3937;
+       }
+       else
+       {
+        this.uomValue=3600;
+       }
+       let a=this.aTpoint* this.uomValue;
        let b=this.FQCactualQty*this.FQCactualSize;
        let c= a/b;
-       this.MyDefectPer = Number((c / 100)).toFixed(2);
+       this.MyDefectPer = Number(c).toFixed(2);
        console.log('MyDefectPer=',this.MyDefectPer)
        console.log('this.txt_shipAllowance = ',this.txt_shipAllowance);
        if(Number(this.defectPer)<=Number(this.txt_shipAllowance))
